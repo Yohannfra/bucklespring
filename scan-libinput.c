@@ -46,7 +46,7 @@ static void handle_key(struct libinput_event *ev)
 static void handle_events(struct libinput *li)
 {
 	struct libinput_event *ev;
-		
+
 	libinput_dispatch(li);
 
 	while((ev = libinput_get_event(li))) {

@@ -10,7 +10,7 @@ void open_console();
 LRESULT CALLBACK handle_kbh(int nCode, WPARAM wParam, LPARAM lParam);
 
 
-static HHOOK kbh = NULL; 
+static HHOOK kbh = NULL;
 static int state[256] = { 0 };
 
 

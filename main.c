@@ -38,7 +38,7 @@ static double find_key_loc(int code);
 
 
 
-/* 
+/*
  * Horizontal position on keyboard for each key as they are located on my model-M
  */
 
@@ -53,7 +53,7 @@ static int keyloc[][32] = {
 	{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x69, 0x6c, 0x6a, -1 },
 };
 
-/* 
+/*
  * Horizontal position on keyboard of the pragmatic center of the row, since keys come in different sizes and shapes
  */
 static double midloc[] = {
@@ -100,7 +100,7 @@ int main(int argc, char **argv)
 	int rv = EXIT_SUCCESS;
 	int idx;
 
-	while( (c = getopt_long(argc, argv, 
+	while( (c = getopt_long(argc, argv,
 			       short_opts, long_opts, &idx)) != -1) {
 		switch(c) {
 			case 'd':
@@ -199,7 +199,7 @@ out:
 
 static void usage(char *exe)
 {
-	fprintf(stderr, 
+	fprintf(stderr,
 		"bucklespring version " VERSION "\n"
 		"usage: %s [options]\n"
 		"\n"
@@ -239,7 +239,7 @@ static void list_devices(void)
 void printd(const char *fmt, ...)
 {
 	if(opt_verbose) {
-		
+
 		char buf[256];
 		va_list va;
 
@@ -254,7 +254,7 @@ void printd(const char *fmt, ...)
 
 /*
  * Find horizontal position of the given key on the keyboard. returns -1.0 for
- * left to 1.0 for right 
+ * left to 1.0 for right
  */
 
 static double find_key_loc(int code)
@@ -348,7 +348,7 @@ int play(int code, int press)
 				return -1;
 			}
 		}
-	
+
 		alGenSources((ALuint)1, &src[idx]);
 		TEST_ERROR("source generation");
 

@@ -9,8 +9,9 @@ void key_pressed_cb(XPointer arg, XRecordInterceptData *d);
 
 int scan(int verbose)
 {
+    (void)verbose;
 	/* Initialize and start Xrecord context */
-	
+
 	XRecordRange* rr;
 	XRecordClientSpec rcs;
 	XRecordContext rc;
@@ -22,7 +23,7 @@ int scan(int verbose)
 		fprintf(stderr, "Unable to open display\n");
 		return -1;
 	}
-    
+
 	rr = XRecordAllocRange ();
 	if(rr == NULL) {
 		fprintf(stderr, "XRecordAllocRange error\n");
@@ -56,11 +57,12 @@ int scan(int verbose)
  * Xrecord event callback
  */
 
-void key_pressed_cb(XPointer arg, XRecordInterceptData *d) 
+void key_pressed_cb(XPointer arg, XRecordInterceptData *d)
 {
+    (void)arg;
 	if (d->category != XRecordFromServer)
 		return;
-    
+
 	int key = ((unsigned char*) d->data)[1];
 	int type = ((unsigned char*) d->data)[0] & 0x7F;
 	int repeat = d->data[2] & 1;

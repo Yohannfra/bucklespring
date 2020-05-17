@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	FILE *fout = NULL;
 	int head = 0;
 	int16_t hist[HISTSIZE];
-	
+
 	if(argc < 2) {
 		fprintf(stderr, "usage: %s </dev/input/event#>\n", argv[0]);
 		exit(1);

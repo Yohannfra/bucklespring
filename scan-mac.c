@@ -1,8 +1,8 @@
 #include <ApplicationServices/ApplicationServices.h>
 #include "buckle.h"
 
-/* 
- * From https://www.virtualbox.org/svn/vbox/trunk/src/VBox/Frontends/VirtualBox/src/platform/darwin/DarwinKeyboard.cpp 
+/*
+ * From https://www.virtualbox.org/svn/vbox/trunk/src/VBox/Frontends/VirtualBox/src/platform/darwin/DarwinKeyboard.cpp
  */
 
 static const int mactoset1[] =
@@ -142,8 +142,8 @@ static const int mactoset1[] =
 };
 
 
-/* 
- * Adapted from https://danielbeard.wordpress.com/2010/10/29/listening-for-global-keypresses-in-osx/ 
+/*
+ * Adapted from https://danielbeard.wordpress.com/2010/10/29/listening-for-global-keypresses-in-osx/
  */
 
 CGEventRef myCGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
